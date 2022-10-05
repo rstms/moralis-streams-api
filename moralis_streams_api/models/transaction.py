@@ -30,7 +30,6 @@ class Transaction(object):
     swagger_types = {
         'tag': 'str',
         'stream_id': 'str',
-        'stream_type': 'str',
         'hash': 'str',
         'gas': 'str',
         'gas_price': 'str',
@@ -54,7 +53,6 @@ class Transaction(object):
     attribute_map = {
         'tag': 'tag',
         'stream_id': 'streamId',
-        'stream_type': 'streamType',
         'hash': 'hash',
         'gas': 'gas',
         'gas_price': 'gasPrice',
@@ -75,11 +73,10 @@ class Transaction(object):
         'receipt_status': 'receiptStatus'
     }
 
-    def __init__(self, tag=None, stream_id=None, stream_type=None, hash=None, gas=None, gas_price=None, nonce=None, input=None, transaction_index=None, from_address=None, to_address=None, value=None, type=None, v=None, r=None, s=None, receipt_cumulative_gas_used=None, receipt_gas_used=None, receipt_contract_address=None, receipt_root=None, receipt_status=None):  # noqa: E501
+    def __init__(self, tag=None, stream_id=None, hash=None, gas=None, gas_price=None, nonce=None, input=None, transaction_index=None, from_address=None, to_address=None, value=None, type=None, v=None, r=None, s=None, receipt_cumulative_gas_used=None, receipt_gas_used=None, receipt_contract_address=None, receipt_root=None, receipt_status=None):  # noqa: E501
         """Transaction - a model defined in Swagger"""  # noqa: E501
         self._tag = None
         self._stream_id = None
-        self._stream_type = None
         self._hash = None
         self._gas = None
         self._gas_price = None
@@ -101,7 +98,6 @@ class Transaction(object):
         self.discriminator = None
         self.tag = tag
         self.stream_id = stream_id
-        self.stream_type = stream_type
         self.hash = hash
         self.gas = gas
         self.gas_price = gas_price
@@ -166,29 +162,6 @@ class Transaction(object):
             raise ValueError("Invalid value for `stream_id`, must not be `None`")  # noqa: E501
 
         self._stream_id = stream_id
-
-    @property
-    def stream_type(self):
-        """Gets the stream_type of this Transaction.  # noqa: E501
-
-
-        :return: The stream_type of this Transaction.  # noqa: E501
-        :rtype: str
-        """
-        return self._stream_type
-
-    @stream_type.setter
-    def stream_type(self, stream_type):
-        """Sets the stream_type of this Transaction.
-
-
-        :param stream_type: The stream_type of this Transaction.  # noqa: E501
-        :type: str
-        """
-        if stream_type is None:
-            raise ValueError("Invalid value for `stream_type`, must not be `None`")  # noqa: E501
-
-        self._stream_type = stream_type
 
     @property
     def hash(self):

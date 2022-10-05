@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **transaction_hash** | **str** |  | 
-**token_address** | **str** |  | 
+**contract** | **str** |  | 
 **log_index** | **str** |  | 
 **tag** | **str** |  | 
 **owner** | **str** |  | 

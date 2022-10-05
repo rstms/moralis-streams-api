@@ -30,7 +30,6 @@ class Log(object):
     swagger_types = {
         'tag': 'str',
         'stream_id': 'str',
-        'stream_type': 'str',
         'log_index': 'str',
         'transaction_hash': 'str',
         'address': 'str',
@@ -44,7 +43,6 @@ class Log(object):
     attribute_map = {
         'tag': 'tag',
         'stream_id': 'streamId',
-        'stream_type': 'streamType',
         'log_index': 'logIndex',
         'transaction_hash': 'transactionHash',
         'address': 'address',
@@ -55,11 +53,10 @@ class Log(object):
         'topic3': 'topic3'
     }
 
-    def __init__(self, tag=None, stream_id=None, stream_type=None, log_index=None, transaction_hash=None, address=None, data=None, topic0=None, topic1=None, topic2=None, topic3=None):  # noqa: E501
+    def __init__(self, tag=None, stream_id=None, log_index=None, transaction_hash=None, address=None, data=None, topic0=None, topic1=None, topic2=None, topic3=None):  # noqa: E501
         """Log - a model defined in Swagger"""  # noqa: E501
         self._tag = None
         self._stream_id = None
-        self._stream_type = None
         self._log_index = None
         self._transaction_hash = None
         self._address = None
@@ -71,7 +68,6 @@ class Log(object):
         self.discriminator = None
         self.tag = tag
         self.stream_id = stream_id
-        self.stream_type = stream_type
         self.log_index = log_index
         self.transaction_hash = transaction_hash
         self.address = address
@@ -126,29 +122,6 @@ class Log(object):
             raise ValueError("Invalid value for `stream_id`, must not be `None`")  # noqa: E501
 
         self._stream_id = stream_id
-
-    @property
-    def stream_type(self):
-        """Gets the stream_type of this Log.  # noqa: E501
-
-
-        :return: The stream_type of this Log.  # noqa: E501
-        :rtype: str
-        """
-        return self._stream_type
-
-    @stream_type.setter
-    def stream_type(self, stream_type):
-        """Sets the stream_type of this Log.
-
-
-        :param stream_type: The stream_type of this Log.  # noqa: E501
-        :type: str
-        """
-        if stream_type is None:
-            raise ValueError("Invalid value for `stream_type`, must not be `None`")  # noqa: E501
-
-        self._stream_type = stream_type
 
     @property
     def log_index(self):

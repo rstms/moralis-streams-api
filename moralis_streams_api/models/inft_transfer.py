@@ -29,7 +29,7 @@ class INFTTransfer(object):
     """
     swagger_types = {
         'transaction_hash': 'str',
-        'token_address': 'str',
+        'contract': 'str',
         'log_index': 'str',
         'tag': 'str',
         'token_contract_type': 'str',
@@ -44,7 +44,7 @@ class INFTTransfer(object):
 
     attribute_map = {
         'transaction_hash': 'transactionHash',
-        'token_address': 'tokenAddress',
+        'contract': 'contract',
         'log_index': 'logIndex',
         'tag': 'tag',
         'token_contract_type': 'tokenContractType',
@@ -57,10 +57,10 @@ class INFTTransfer(object):
         'amount': 'amount'
     }
 
-    def __init__(self, transaction_hash=None, token_address=None, log_index=None, tag=None, token_contract_type=None, token_name=None, token_symbol=None, operator=None, _from=None, to=None, token_id=None, amount=None):  # noqa: E501
+    def __init__(self, transaction_hash=None, contract=None, log_index=None, tag=None, token_contract_type=None, token_name=None, token_symbol=None, operator=None, _from=None, to=None, token_id=None, amount=None):  # noqa: E501
         """INFTTransfer - a model defined in Swagger"""  # noqa: E501
         self._transaction_hash = None
-        self._token_address = None
+        self._contract = None
         self._log_index = None
         self._tag = None
         self._token_contract_type = None
@@ -73,7 +73,7 @@ class INFTTransfer(object):
         self._amount = None
         self.discriminator = None
         self.transaction_hash = transaction_hash
-        self.token_address = token_address
+        self.contract = contract
         self.log_index = log_index
         self.tag = tag
         self.token_contract_type = token_contract_type
@@ -109,27 +109,27 @@ class INFTTransfer(object):
         self._transaction_hash = transaction_hash
 
     @property
-    def token_address(self):
-        """Gets the token_address of this INFTTransfer.  # noqa: E501
+    def contract(self):
+        """Gets the contract of this INFTTransfer.  # noqa: E501
 
 
-        :return: The token_address of this INFTTransfer.  # noqa: E501
+        :return: The contract of this INFTTransfer.  # noqa: E501
         :rtype: str
         """
-        return self._token_address
+        return self._contract
 
-    @token_address.setter
-    def token_address(self, token_address):
-        """Sets the token_address of this INFTTransfer.
+    @contract.setter
+    def contract(self, contract):
+        """Sets the contract of this INFTTransfer.
 
 
-        :param token_address: The token_address of this INFTTransfer.  # noqa: E501
+        :param contract: The contract of this INFTTransfer.  # noqa: E501
         :type: str
         """
-        if token_address is None:
-            raise ValueError("Invalid value for `token_address`, must not be `None`")  # noqa: E501
+        if contract is None:
+            raise ValueError("Invalid value for `contract`, must not be `None`")  # noqa: E501
 
-        self._token_address = token_address
+        self._contract = contract
 
     @property
     def log_index(self):

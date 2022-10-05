@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**replay_history**](HistoryApi.md#replay_history) | **POST** /history/replay/{id} | 
 
 # **get_history**
-> HistoryTypesHistoryResponse get_history(limit, cursor=cursor)
+> HistoryTypesHistoryResponse get_history(limit, cursor=cursor, exclude_payload=exclude_payload)
 
 
 
@@ -30,9 +30,10 @@ configuration.api_key['x-api-key'] = 'YOUR_API_KEY'
 api_instance = moralis_streams_api.HistoryApi(moralis_streams_api.ApiClient(configuration))
 limit = 1.2 # float | 
 cursor = 'cursor_example' # str |  (optional)
+exclude_payload = true # bool |  (optional)
 
 try:
-    api_response = api_instance.get_history(limit, cursor=cursor)
+    api_response = api_instance.get_history(limit, cursor=cursor, exclude_payload=exclude_payload)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling HistoryApi->get_history: %s\n" % e)
@@ -44,6 +45,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **limit** | **float**|  | 
  **cursor** | **str**|  | [optional] 
+ **exclude_payload** | **bool**|  | [optional] 
 
 ### Return type
 

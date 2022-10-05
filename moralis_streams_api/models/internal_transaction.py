@@ -34,8 +34,7 @@ class InternalTransaction(object):
         'transaction_hash': 'str',
         'gas': 'str',
         'stream_id': 'str',
-        'tag': 'str',
-        'stream_type': 'str'
+        'tag': 'str'
     }
 
     attribute_map = {
@@ -45,11 +44,10 @@ class InternalTransaction(object):
         'transaction_hash': 'transactionHash',
         'gas': 'gas',
         'stream_id': 'streamId',
-        'tag': 'tag',
-        'stream_type': 'streamType'
+        'tag': 'tag'
     }
 
-    def __init__(self, _from=None, to=None, value=None, transaction_hash=None, gas=None, stream_id=None, tag=None, stream_type=None):  # noqa: E501
+    def __init__(self, _from=None, to=None, value=None, transaction_hash=None, gas=None, stream_id=None, tag=None):  # noqa: E501
         """InternalTransaction - a model defined in Swagger"""  # noqa: E501
         self.__from = None
         self._to = None
@@ -58,7 +56,6 @@ class InternalTransaction(object):
         self._gas = None
         self._stream_id = None
         self._tag = None
-        self._stream_type = None
         self.discriminator = None
         self._from = _from
         self.to = to
@@ -67,7 +64,6 @@ class InternalTransaction(object):
         self.gas = gas
         self.stream_id = stream_id
         self.tag = tag
-        self.stream_type = stream_type
 
     @property
     def _from(self):
@@ -229,29 +225,6 @@ class InternalTransaction(object):
             raise ValueError("Invalid value for `tag`, must not be `None`")  # noqa: E501
 
         self._tag = tag
-
-    @property
-    def stream_type(self):
-        """Gets the stream_type of this InternalTransaction.  # noqa: E501
-
-
-        :return: The stream_type of this InternalTransaction.  # noqa: E501
-        :rtype: str
-        """
-        return self._stream_type
-
-    @stream_type.setter
-    def stream_type(self, stream_type):
-        """Sets the stream_type of this InternalTransaction.
-
-
-        :param stream_type: The stream_type of this InternalTransaction.  # noqa: E501
-        :type: str
-        """
-        if stream_type is None:
-            raise ValueError("Invalid value for `stream_type`, must not be `None`")  # noqa: E501
-
-        self._stream_type = stream_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

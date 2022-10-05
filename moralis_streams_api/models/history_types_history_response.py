@@ -29,22 +29,26 @@ class HistoryTypesHistoryResponse(object):
     """
     swagger_types = {
         'result': 'list[HistoryModel]',
-        'cursor': 'str'
+        'cursor': 'str',
+        'total': 'float'
     }
 
     attribute_map = {
         'result': 'result',
-        'cursor': 'cursor'
+        'cursor': 'cursor',
+        'total': 'total'
     }
 
-    def __init__(self, result=None, cursor=None):  # noqa: E501
+    def __init__(self, result=None, cursor=None, total=None):  # noqa: E501
         """HistoryTypesHistoryResponse - a model defined in Swagger"""  # noqa: E501
         self._result = None
         self._cursor = None
+        self._total = None
         self.discriminator = None
         self.result = result
         if cursor is not None:
             self.cursor = cursor
+        self.total = total
 
     @property
     def result(self):
@@ -89,6 +93,29 @@ class HistoryTypesHistoryResponse(object):
         """
 
         self._cursor = cursor
+
+    @property
+    def total(self):
+        """Gets the total of this HistoryTypesHistoryResponse.  # noqa: E501
+
+
+        :return: The total of this HistoryTypesHistoryResponse.  # noqa: E501
+        :rtype: float
+        """
+        return self._total
+
+    @total.setter
+    def total(self, total):
+        """Sets the total of this HistoryTypesHistoryResponse.
+
+
+        :param total: The total of this HistoryTypesHistoryResponse.  # noqa: E501
+        :type: float
+        """
+        if total is None:
+            raise ValueError("Invalid value for `total`, must not be `None`")  # noqa: E501
+
+        self._total = total
 
     def to_dict(self):
         """Returns the model properties as a dict"""

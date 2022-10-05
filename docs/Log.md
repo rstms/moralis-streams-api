@@ -5,7 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tag** | **str** |  | 
 **stream_id** | **str** |  | 
-**stream_type** | **str** |  | 
 **log_index** | **str** |  | 
 **transaction_hash** | **str** |  | 
 **address** | **str** |  | 

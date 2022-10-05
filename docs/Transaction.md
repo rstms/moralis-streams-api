@@ -5,7 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tag** | **str** |  | 
 **stream_id** | **str** |  | 
-**stream_type** | **str** |  | 
 **hash** | **str** |  | 
 **gas** | **str** |  | 
 **gas_price** | **str** |  | 

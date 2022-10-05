@@ -43,6 +43,7 @@ class HistoryApi(object):
         :param async_req bool
         :param float limit: (required)
         :param str cursor:
+        :param bool exclude_payload:
         :return: HistoryTypesHistoryResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -65,12 +66,13 @@ class HistoryApi(object):
         :param async_req bool
         :param float limit: (required)
         :param str cursor:
+        :param bool exclude_payload:
         :return: HistoryTypesHistoryResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['limit', 'cursor']  # noqa: E501
+        all_params = ['limit', 'cursor', 'exclude_payload']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -99,6 +101,8 @@ class HistoryApi(object):
             query_params.append(('limit', params['limit']))  # noqa: E501
         if 'cursor' in params:
             query_params.append(('cursor', params['cursor']))  # noqa: E501
+        if 'exclude_payload' in params:
+            query_params.append(('excludePayload', params['exclude_payload']))  # noqa: E501
 
         header_params = {}
 

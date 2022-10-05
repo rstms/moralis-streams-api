@@ -6,14 +6,14 @@ Name | Type | Description | Notes
 **webhook_url** | **str** | Webhook URL where moralis will send the POST request. | [optional] 
 **description** | **str** | A description for this stream | [optional] 
 **tag** | **str** | A user-provided tag that will be send along the webhook, the user can use this tag to identify the specific stream if multiple streams are present | [optional] 
-**token_address** | **str** | The token address of the contract, required if the type : log | [optional] 
-**topic0** | **str** | The topic0 of the event in hex, required if the type : log | [optional] 
+**topic0** | **list[str]** | An Array of topic0&#x27;s in hex, required if the type : log | [optional] 
+**all_addresses** | **bool** | Include events for all addresses (only applied when abi and topic0 is provided) | [optional] 
 **include_native_txs** | **bool** | Include or not native transactions defaults to false (only applied when type:contract) | [optional] 
-**abi** | **AllOfPartialStreamsTypesStreamsModelCreateAbi** |  | [optional] 
-**filter** | **AllOfPartialStreamsTypesStreamsModelCreateFilter** |  | [optional] 
-**address** | **str** | The wallet address of the user, required if the type : tx | [optional] 
+**include_contract_logs** | **bool** | Include or not logs of contract interactions defaults to false | [optional] 
+**include_internal_txs** | **bool** | Include or not include internal transactions defaults to false | [optional] 
+**abi** | [**list[StreamsAbi]**](StreamsAbi.md) |  | [optional] 
+**advanced_options** | [**list[AdvancedOptions]**](AdvancedOptions.md) |  | [optional] 
 **chain_ids** | **list[str]** | The ids of the chains for this stream in hex Ex: [\&quot;0x1\&quot;,\&quot;0x38\&quot;] | [optional] 
-**type** | [**StreamsType**](StreamsType.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

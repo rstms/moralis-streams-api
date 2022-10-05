@@ -29,7 +29,7 @@ class IERC20Transfer(object):
     """
     swagger_types = {
         'transaction_hash': 'str',
-        'token_address': 'str',
+        'contract': 'str',
         'log_index': 'str',
         'tag': 'str',
         '_from': 'str',
@@ -43,7 +43,7 @@ class IERC20Transfer(object):
 
     attribute_map = {
         'transaction_hash': 'transactionHash',
-        'token_address': 'tokenAddress',
+        'contract': 'contract',
         'log_index': 'logIndex',
         'tag': 'tag',
         '_from': 'from',
@@ -55,10 +55,10 @@ class IERC20Transfer(object):
         'value_with_decimals': 'valueWithDecimals'
     }
 
-    def __init__(self, transaction_hash=None, token_address=None, log_index=None, tag=None, _from=None, to=None, value=None, token_decimals=None, token_name=None, token_symbol=None, value_with_decimals=None):  # noqa: E501
+    def __init__(self, transaction_hash=None, contract=None, log_index=None, tag=None, _from=None, to=None, value=None, token_decimals=None, token_name=None, token_symbol=None, value_with_decimals=None):  # noqa: E501
         """IERC20Transfer - a model defined in Swagger"""  # noqa: E501
         self._transaction_hash = None
-        self._token_address = None
+        self._contract = None
         self._log_index = None
         self._tag = None
         self.__from = None
@@ -70,7 +70,7 @@ class IERC20Transfer(object):
         self._value_with_decimals = None
         self.discriminator = None
         self.transaction_hash = transaction_hash
-        self.token_address = token_address
+        self.contract = contract
         self.log_index = log_index
         self.tag = tag
         self._from = _from
@@ -106,27 +106,27 @@ class IERC20Transfer(object):
         self._transaction_hash = transaction_hash
 
     @property
-    def token_address(self):
-        """Gets the token_address of this IERC20Transfer.  # noqa: E501
+    def contract(self):
+        """Gets the contract of this IERC20Transfer.  # noqa: E501
 
 
-        :return: The token_address of this IERC20Transfer.  # noqa: E501
+        :return: The contract of this IERC20Transfer.  # noqa: E501
         :rtype: str
         """
-        return self._token_address
+        return self._contract
 
-    @token_address.setter
-    def token_address(self, token_address):
-        """Sets the token_address of this IERC20Transfer.
+    @contract.setter
+    def contract(self, contract):
+        """Sets the contract of this IERC20Transfer.
 
 
-        :param token_address: The token_address of this IERC20Transfer.  # noqa: E501
+        :param contract: The contract of this IERC20Transfer.  # noqa: E501
         :type: str
         """
-        if token_address is None:
-            raise ValueError("Invalid value for `token_address`, must not be `None`")  # noqa: E501
+        if contract is None:
+            raise ValueError("Invalid value for `contract`, must not be `None`")  # noqa: E501
 
-        self._token_address = token_address
+        self._contract = contract
 
     @property
     def log_index(self):

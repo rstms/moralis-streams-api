@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import moralis_streams_api
-from moralis_streams_api.models.all_ofstreams_types_streams_model_create_filter import AllOfstreamsTypesStreamsModelCreateFilter  # noqa: E501
+from moralis_streams_api.models.advanced_options import AdvancedOptions  # noqa: E501
 from moralis_streams_api.rest import ApiException
 
 
-class TestAllOfstreamsTypesStreamsModelCreateFilter(unittest.TestCase):
-    """AllOfstreamsTypesStreamsModelCreateFilter unit test stubs"""
+class TestAdvancedOptions(unittest.TestCase):
+    """AdvancedOptions unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestAllOfstreamsTypesStreamsModelCreateFilter(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testAllOfstreamsTypesStreamsModelCreateFilter(self):
-        """Test AllOfstreamsTypesStreamsModelCreateFilter"""
+    def testAdvancedOptions(self):
+        """Test AdvancedOptions"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = moralis_streams_api.models.all_ofstreams_types_streams_model_create_filter.AllOfstreamsTypesStreamsModelCreateFilter()  # noqa: E501
+        # model = moralis_streams_api.models.advanced_options.AdvancedOptions()  # noqa: E501
         pass
 
 

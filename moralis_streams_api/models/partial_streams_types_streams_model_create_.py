@@ -31,43 +31,43 @@ class PartialStreamsTypesStreamsModelCreate_(object):
         'webhook_url': 'str',
         'description': 'str',
         'tag': 'str',
-        'token_address': 'str',
-        'topic0': 'str',
+        'topic0': 'list[str]',
+        'all_addresses': 'bool',
         'include_native_txs': 'bool',
-        'abi': 'AllOfPartialStreamsTypesStreamsModelCreateAbi',
-        'filter': 'AllOfPartialStreamsTypesStreamsModelCreateFilter',
-        'address': 'str',
-        'chain_ids': 'list[str]',
-        'type': 'StreamsType'
+        'include_contract_logs': 'bool',
+        'include_internal_txs': 'bool',
+        'abi': 'list[StreamsAbi]',
+        'advanced_options': 'list[AdvancedOptions]',
+        'chain_ids': 'list[str]'
     }
 
     attribute_map = {
         'webhook_url': 'webhookUrl',
         'description': 'description',
         'tag': 'tag',
-        'token_address': 'tokenAddress',
         'topic0': 'topic0',
+        'all_addresses': 'allAddresses',
         'include_native_txs': 'includeNativeTxs',
+        'include_contract_logs': 'includeContractLogs',
+        'include_internal_txs': 'includeInternalTxs',
         'abi': 'abi',
-        'filter': 'filter',
-        'address': 'address',
-        'chain_ids': 'chainIds',
-        'type': 'type'
+        'advanced_options': 'advancedOptions',
+        'chain_ids': 'chainIds'
     }
 
-    def __init__(self, webhook_url=None, description=None, tag=None, token_address=None, topic0=None, include_native_txs=None, abi=None, filter=None, address=None, chain_ids=None, type=None):  # noqa: E501
+    def __init__(self, webhook_url=None, description=None, tag=None, topic0=None, all_addresses=None, include_native_txs=None, include_contract_logs=None, include_internal_txs=None, abi=None, advanced_options=None, chain_ids=None):  # noqa: E501
         """PartialStreamsTypesStreamsModelCreate_ - a model defined in Swagger"""  # noqa: E501
         self._webhook_url = None
         self._description = None
         self._tag = None
-        self._token_address = None
         self._topic0 = None
+        self._all_addresses = None
         self._include_native_txs = None
+        self._include_contract_logs = None
+        self._include_internal_txs = None
         self._abi = None
-        self._filter = None
-        self._address = None
+        self._advanced_options = None
         self._chain_ids = None
-        self._type = None
         self.discriminator = None
         if webhook_url is not None:
             self.webhook_url = webhook_url
@@ -75,22 +75,22 @@ class PartialStreamsTypesStreamsModelCreate_(object):
             self.description = description
         if tag is not None:
             self.tag = tag
-        if token_address is not None:
-            self.token_address = token_address
         if topic0 is not None:
             self.topic0 = topic0
+        if all_addresses is not None:
+            self.all_addresses = all_addresses
         if include_native_txs is not None:
             self.include_native_txs = include_native_txs
+        if include_contract_logs is not None:
+            self.include_contract_logs = include_contract_logs
+        if include_internal_txs is not None:
+            self.include_internal_txs = include_internal_txs
         if abi is not None:
             self.abi = abi
-        if filter is not None:
-            self.filter = filter
-        if address is not None:
-            self.address = address
+        if advanced_options is not None:
+            self.advanced_options = advanced_options
         if chain_ids is not None:
             self.chain_ids = chain_ids
-        if type is not None:
-            self.type = type
 
     @property
     def webhook_url(self):
@@ -162,36 +162,13 @@ class PartialStreamsTypesStreamsModelCreate_(object):
         self._tag = tag
 
     @property
-    def token_address(self):
-        """Gets the token_address of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-
-        The token address of the contract, required if the type : log  # noqa: E501
-
-        :return: The token_address of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-        :rtype: str
-        """
-        return self._token_address
-
-    @token_address.setter
-    def token_address(self, token_address):
-        """Sets the token_address of this PartialStreamsTypesStreamsModelCreate_.
-
-        The token address of the contract, required if the type : log  # noqa: E501
-
-        :param token_address: The token_address of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-        :type: str
-        """
-
-        self._token_address = token_address
-
-    @property
     def topic0(self):
         """Gets the topic0 of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
 
-        The topic0 of the event in hex, required if the type : log  # noqa: E501
+        An Array of topic0's in hex, required if the type : log  # noqa: E501
 
         :return: The topic0 of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-        :rtype: str
+        :rtype: list[str]
         """
         return self._topic0
 
@@ -199,13 +176,36 @@ class PartialStreamsTypesStreamsModelCreate_(object):
     def topic0(self, topic0):
         """Sets the topic0 of this PartialStreamsTypesStreamsModelCreate_.
 
-        The topic0 of the event in hex, required if the type : log  # noqa: E501
+        An Array of topic0's in hex, required if the type : log  # noqa: E501
 
         :param topic0: The topic0 of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-        :type: str
+        :type: list[str]
         """
 
         self._topic0 = topic0
+
+    @property
+    def all_addresses(self):
+        """Gets the all_addresses of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
+
+        Include events for all addresses (only applied when abi and topic0 is provided)  # noqa: E501
+
+        :return: The all_addresses of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
+        :rtype: bool
+        """
+        return self._all_addresses
+
+    @all_addresses.setter
+    def all_addresses(self, all_addresses):
+        """Sets the all_addresses of this PartialStreamsTypesStreamsModelCreate_.
+
+        Include events for all addresses (only applied when abi and topic0 is provided)  # noqa: E501
+
+        :param all_addresses: The all_addresses of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
+        :type: bool
+        """
+
+        self._all_addresses = all_addresses
 
     @property
     def include_native_txs(self):
@@ -231,12 +231,58 @@ class PartialStreamsTypesStreamsModelCreate_(object):
         self._include_native_txs = include_native_txs
 
     @property
+    def include_contract_logs(self):
+        """Gets the include_contract_logs of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
+
+        Include or not logs of contract interactions defaults to false  # noqa: E501
+
+        :return: The include_contract_logs of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_contract_logs
+
+    @include_contract_logs.setter
+    def include_contract_logs(self, include_contract_logs):
+        """Sets the include_contract_logs of this PartialStreamsTypesStreamsModelCreate_.
+
+        Include or not logs of contract interactions defaults to false  # noqa: E501
+
+        :param include_contract_logs: The include_contract_logs of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_contract_logs = include_contract_logs
+
+    @property
+    def include_internal_txs(self):
+        """Gets the include_internal_txs of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
+
+        Include or not include internal transactions defaults to false  # noqa: E501
+
+        :return: The include_internal_txs of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_internal_txs
+
+    @include_internal_txs.setter
+    def include_internal_txs(self, include_internal_txs):
+        """Sets the include_internal_txs of this PartialStreamsTypesStreamsModelCreate_.
+
+        Include or not include internal transactions defaults to false  # noqa: E501
+
+        :param include_internal_txs: The include_internal_txs of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_internal_txs = include_internal_txs
+
+    @property
     def abi(self):
         """Gets the abi of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
 
 
         :return: The abi of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-        :rtype: AllOfPartialStreamsTypesStreamsModelCreateAbi
+        :rtype: list[StreamsAbi]
         """
         return self._abi
 
@@ -246,54 +292,31 @@ class PartialStreamsTypesStreamsModelCreate_(object):
 
 
         :param abi: The abi of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-        :type: AllOfPartialStreamsTypesStreamsModelCreateAbi
+        :type: list[StreamsAbi]
         """
 
         self._abi = abi
 
     @property
-    def filter(self):
-        """Gets the filter of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
+    def advanced_options(self):
+        """Gets the advanced_options of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
 
 
-        :return: The filter of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-        :rtype: AllOfPartialStreamsTypesStreamsModelCreateFilter
+        :return: The advanced_options of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
+        :rtype: list[AdvancedOptions]
         """
-        return self._filter
+        return self._advanced_options
 
-    @filter.setter
-    def filter(self, filter):
-        """Sets the filter of this PartialStreamsTypesStreamsModelCreate_.
+    @advanced_options.setter
+    def advanced_options(self, advanced_options):
+        """Sets the advanced_options of this PartialStreamsTypesStreamsModelCreate_.
 
 
-        :param filter: The filter of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-        :type: AllOfPartialStreamsTypesStreamsModelCreateFilter
-        """
-
-        self._filter = filter
-
-    @property
-    def address(self):
-        """Gets the address of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-
-        The wallet address of the user, required if the type : tx  # noqa: E501
-
-        :return: The address of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-        :rtype: str
-        """
-        return self._address
-
-    @address.setter
-    def address(self, address):
-        """Sets the address of this PartialStreamsTypesStreamsModelCreate_.
-
-        The wallet address of the user, required if the type : tx  # noqa: E501
-
-        :param address: The address of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-        :type: str
+        :param advanced_options: The advanced_options of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
+        :type: list[AdvancedOptions]
         """
 
-        self._address = address
+        self._advanced_options = advanced_options
 
     @property
     def chain_ids(self):
@@ -317,27 +340,6 @@ class PartialStreamsTypesStreamsModelCreate_(object):
         """
 
         self._chain_ids = chain_ids
-
-    @property
-    def type(self):
-        """Gets the type of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-
-
-        :return: The type of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-        :rtype: StreamsType
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this PartialStreamsTypesStreamsModelCreate_.
-
-
-        :param type: The type of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-        :type: StreamsType
-        """
-
-        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""
