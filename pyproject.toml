@@ -7,7 +7,7 @@ requires_python = ">=3.10"
 
 [project]
 name = "moralis-streams-api"
-version = "1.0.3"
+version = "1.0.4"
 authors = [{name = "Matt Krueger", email = "mkrueger@rstms.net"}]
 readme = {file = "README.md", content-type = "text/markdown"}
 license = {file = "LICENSE"}
