@@ -11,12 +11,12 @@ Name | Type | Description | Notes
 **include_native_txs** | **bool** | Include or not native transactions defaults to false (only applied when type:contract) | [optional] 
 **include_contract_logs** | **bool** | Include or not logs of contract interactions defaults to false | [optional] 
 **include_internal_txs** | **bool** | Include or not include internal transactions defaults to false | [optional] 
-**abi** | [**list[StreamsAbi]**](StreamsAbi.md) |  | [optional] 
+**abi** | [**list[AbiItem]**](AbiItem.md) |  | [optional] 
 **advanced_options** | [**list[AdvancedOptions]**](AdvancedOptions.md) |  | [optional] 
 **chain_ids** | **list[str]** | The ids of the chains for this stream in hex Ex: [\&quot;0x1\&quot;,\&quot;0x38\&quot;] | 
-**id** | **str** |  | [optional] 
-**status** | [**StreamsStatus**](StreamsStatus.md) |  | [optional] 
-**status_message** | **str** | Description of current status of stream. | [optional] 
+**id** | **str** |  | 
+**status** | [**StreamsStatus**](StreamsStatus.md) |  | 
+**status_message** | **str** | Description of current status of stream. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

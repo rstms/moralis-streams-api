@@ -36,7 +36,7 @@ class PartialStreamsTypesStreamsModelCreate_(object):
         'include_native_txs': 'bool',
         'include_contract_logs': 'bool',
         'include_internal_txs': 'bool',
-        'abi': 'list[StreamsAbi]',
+        'abi': 'list[AbiItem]',
         'advanced_options': 'list[AdvancedOptions]',
         'chain_ids': 'list[str]'
     }
@@ -282,7 +282,7 @@ class PartialStreamsTypesStreamsModelCreate_(object):
 
 
         :return: The abi of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-        :rtype: list[StreamsAbi]
+        :rtype: list[AbiItem]
         """
         return self._abi
 
@@ -292,7 +292,7 @@ class PartialStreamsTypesStreamsModelCreate_(object):
 
 
         :param abi: The abi of this PartialStreamsTypesStreamsModelCreate_.  # noqa: E501
-        :type: list[StreamsAbi]
+        :type: list[AbiItem]
         """
 
         self._abi = abi

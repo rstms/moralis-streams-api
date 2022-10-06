@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **outputs** | [**list[AbiOutput]**](AbiOutput.md) |  | [optional] 
 **payable** | **bool** |  | [optional] 
-**state_mutability** | [**StateMutabilityType**](StateMutabilityType.md) |  | [optional] 
-**type** | [**AbiType**](AbiType.md) |  | 
+**state_mutability** | **str** |  | [optional] 
+**type** | **str** |  | 
 **gas** | **float** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

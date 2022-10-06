@@ -34,8 +34,8 @@ class AbiItem(object):
         'name': 'str',
         'outputs': 'list[AbiOutput]',
         'payable': 'bool',
-        'state_mutability': 'StateMutabilityType',
-        'type': 'AbiType',
+        'state_mutability': 'str',
+        'type': 'str',
         'gas': 'float'
     }
 
@@ -213,7 +213,7 @@ class AbiItem(object):
 
 
         :return: The state_mutability of this AbiItem.  # noqa: E501
-        :rtype: StateMutabilityType
+        :rtype: str
         """
         return self._state_mutability
 
@@ -223,7 +223,7 @@ class AbiItem(object):
 
 
         :param state_mutability: The state_mutability of this AbiItem.  # noqa: E501
-        :type: StateMutabilityType
+        :type: str
         """
 
         self._state_mutability = state_mutability
@@ -234,7 +234,7 @@ class AbiItem(object):
 
 
         :return: The type of this AbiItem.  # noqa: E501
-        :rtype: AbiType
+        :rtype: str
         """
         return self._type
 
@@ -244,7 +244,7 @@ class AbiItem(object):
 
 
         :param type: The type of this AbiItem.  # noqa: E501
-        :type: AbiType
+        :type: str
         """
         if type is None:
             raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501

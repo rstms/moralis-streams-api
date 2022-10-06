@@ -36,7 +36,7 @@ class StreamsModel(object):
         'include_native_txs': 'bool',
         'include_contract_logs': 'bool',
         'include_internal_txs': 'bool',
-        'abi': 'list[StreamsAbi]',
+        'abi': 'list[AbiItem]',
         'advanced_options': 'list[AdvancedOptions]',
         'chain_ids': 'list[str]',
         'id': 'str',
@@ -96,12 +96,9 @@ class StreamsModel(object):
         if advanced_options is not None:
             self.advanced_options = advanced_options
         self.chain_ids = chain_ids
-        if id is not None:
-            self.id = id
-        if status is not None:
-            self.status = status
-        if status_message is not None:
-            self.status_message = status_message
+        self.id = id
+        self.status = status
+        self.status_message = status_message
 
     @property
     def webhook_url(self):
@@ -299,7 +296,7 @@ class StreamsModel(object):
 
 
         :return: The abi of this StreamsModel.  # noqa: E501
-        :rtype: list[StreamsAbi]
+        :rtype: list[AbiItem]
         """
         return self._abi
 
@@ -309,7 +306,7 @@ class StreamsModel(object):
 
 
         :param abi: The abi of this StreamsModel.  # noqa: E501
-        :type: list[StreamsAbi]
+        :type: list[AbiItem]
         """
 
         self._abi = abi
@@ -378,6 +375,8 @@ class StreamsModel(object):
         :param id: The id of this StreamsModel.  # noqa: E501
         :type: str
         """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 
@@ -399,6 +398,8 @@ class StreamsModel(object):
         :param status: The status of this StreamsModel.  # noqa: E501
         :type: StreamsStatus
         """
+        if status is None:
+            raise ValueError("Invalid value for `status`, must not be `None`")  # noqa: E501
 
         self._status = status
 
@@ -422,6 +423,8 @@ class StreamsModel(object):
         :param status_message: The status_message of this StreamsModel.  # noqa: E501
         :type: str
         """
+        if status_message is None:
+            raise ValueError("Invalid value for `status_message`, must not be `None`")  # noqa: E501
 
         self._status_message = status_message
 

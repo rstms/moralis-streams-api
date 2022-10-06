@@ -57,7 +57,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **set_settings**
-> set_settings(body)
+> SettingsTypesSettingsModel set_settings(body)
 
 
 
@@ -82,7 +82,8 @@ api_instance = moralis_streams_api.ProjectApi(moralis_streams_api.ApiClient(conf
 body = moralis_streams_api.SettingsTypesSettingsModel() # SettingsTypesSettingsModel | 
 
 try:
-    api_instance.set_settings(body)
+    api_response = api_instance.set_settings(body)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->set_settings: %s\n" % e)
 ```
@@ -95,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**SettingsTypesSettingsModel**](SettingsTypesSettingsModel.md)
 
 ### Authorization
 
@@ -104,7 +105,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
