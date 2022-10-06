@@ -9,6 +9,8 @@ zipfile=$(ls -t ~/win/Downloads/python-client-generated* | head -1)
   unzip $zipfile
 )
 
+find staging | xargs -n 1 touch
+
 DIRS='docs moralis_streams_api moralis_streams_api.egg-info test .swagger-codegen'
 for DIR in $DIRS; do
     rm -rf $DIR

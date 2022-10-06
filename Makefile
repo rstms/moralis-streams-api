@@ -15,8 +15,13 @@ uninstall:
 	pip install -U pip setuptools wheel flit
 	pip uninstall -yqq $(module)
 
+### unpack generated zipfile
+update:
+	scripts/loadzip
+
 ### remove all build, test, coverage and Python artifacts
 clean: 
 	for clean in $(call included,clean); do ${MAKE} $$clean; done
+
 
 include $(wildcard make.include/*.mk)
