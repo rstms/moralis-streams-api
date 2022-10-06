@@ -28,14 +28,43 @@ class UUID(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'uuid': 'str'
     }
 
     attribute_map = {
+        'uuid': 'uuid'
     }
 
-    def __init__(self):  # noqa: E501
+    def __init__(self, uuid=None):  # noqa: E501
         """UUID - a model defined in Swagger"""  # noqa: E501
+        self._uuid = None
         self.discriminator = None
+        self.uuid = uuid
+
+    @property
+    def uuid(self):
+        """Gets the uuid of this UUID.  # noqa: E501
+
+        Stringified UUIDv4. See [RFC 4112](https://tools.ietf.org/html/rfc4122)  # noqa: E501
+
+        :return: The uuid of this UUID.  # noqa: E501
+        :rtype: str
+        """
+        return self._uuid
+
+    @uuid.setter
+    def uuid(self, uuid):
+        """Sets the uuid of this UUID.
+
+        Stringified UUIDv4. See [RFC 4112](https://tools.ietf.org/html/rfc4122)  # noqa: E501
+
+        :param uuid: The uuid of this UUID.  # noqa: E501
+        :type: str
+        """
+        if uuid is None:
+            raise ValueError("Invalid value for `uuid`, must not be `None`")  # noqa: E501
+
+        self._uuid = uuid
 
     def to_dict(self):
         """Returns the model properties as a dict"""
