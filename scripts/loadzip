@@ -1,0 +1,25 @@
+#!/bin/bash
+
+rm -rf staging
+mkdir staging
+ls ~/win/Downloads/python
+zipfile=$(ls -t ~/win/Downloads/python-client-generated* | head -1)
+(
+  cd staging
+  unzip $zipfile
+)
+
+DIRS='docs moralis_streams_api moralis_streams_api.egg-info test .swagger-codegen'
+for DIR in $DIRS; do
+    rm -rf $DIR
+    [ -d staging/$DIR ] && mv staging/$DIR .
+done
+
+FILES='setup.py .travis.yml .gitignore'
+for FILE in $FILES; do
+    rm staging/$FILE
+done
+mv staging/.swagger-codegen-ignore .
+mv staging/* .
+
+rmdir staging
