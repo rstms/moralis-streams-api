@@ -22,7 +22,7 @@ latest_release_version != $(RELEASE) -J latest 2>/dev/null
 latest-github-release:
 	@echo $(latest_release_version)
 
-.dist: $(module)/version.py
+.dist: setup.py
 	$(call gitclean)
 	mkdir -p dist
 	flit build

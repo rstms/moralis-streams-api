@@ -13,8 +13,6 @@ python_src != find . -name \*.py
 other_src := $(call makefiles) pyproject.toml
 src := $(python_src) $(other_src)
 
-$(info version=$(version))
-
 # sanity checks
 $(if $(project),,$(error failed to read project name from pyproject.toml))
 $(if $(shell [ -d ../"$(project)" ] || echo X),$(error project dir $(project) not found))
