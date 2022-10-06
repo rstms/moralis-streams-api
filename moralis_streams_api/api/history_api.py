@@ -143,7 +143,7 @@ class HistoryApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param HistoryTypesUUID id: The id of the history to replay (required)
+        :param str id: The id of the history to replay (required)
         :return: HistoryTypesHistoryModel
                  If the method is called asynchronously,
                  returns the request thread.
@@ -165,7 +165,7 @@ class HistoryApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param HistoryTypesUUID id: The id of the history to replay (required)
+        :param str id: The id of the history to replay (required)
         :return: HistoryTypesHistoryModel
                  If the method is called asynchronously,
                  returns the request thread.

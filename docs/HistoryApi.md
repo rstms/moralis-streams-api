@@ -85,7 +85,7 @@ configuration.api_key['x-api-key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = moralis_streams_api.HistoryApi(moralis_streams_api.ApiClient(configuration))
-id = moralis_streams_api.HistoryTypesUUID() # HistoryTypesUUID | The id of the history to replay
+id = 'id_example' # str | The id of the history to replay
 
 try:
     api_response = api_instance.replay_history(id)
@@ -98,7 +98,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**HistoryTypesUUID**](.md)| The id of the history to replay | 
+ **id** | [**str**](.md)| The id of the history to replay | 
 
 ### Return type
 

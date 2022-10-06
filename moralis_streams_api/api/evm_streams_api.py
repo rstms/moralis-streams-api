@@ -43,7 +43,7 @@ class EVMStreamsApi(object):
 
         :param async_req bool
         :param AddressesTypesAddressesAdd body: Provide a Address Model (required)
-        :param StreamsTypesUUID id: The id of the stream to add the address to (required)
+        :param str id: The id of the stream to add the address to (required)
         :return: AddressesTypesAddressResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -66,7 +66,7 @@ class EVMStreamsApi(object):
 
         :param async_req bool
         :param AddressesTypesAddressesAdd body: Provide a Address Model (required)
-        :param StreamsTypesUUID id: The id of the stream to add the address to (required)
+        :param str id: The id of the stream to add the address to (required)
         :return: AddressesTypesAddressResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -249,7 +249,7 @@ class EVMStreamsApi(object):
 
         :param async_req bool
         :param AddressesTypesAddressesRemove body: Provide a Address Model (required)
-        :param StreamsTypesUUID id: The id of the stream to delete the address from (required)
+        :param str id: The id of the stream to delete the address from (required)
         :return: AddressesTypesDeleteAddressResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -272,7 +272,7 @@ class EVMStreamsApi(object):
 
         :param async_req bool
         :param AddressesTypesAddressesRemove body: Provide a Address Model (required)
-        :param StreamsTypesUUID id: The id of the stream to delete the address from (required)
+        :param str id: The id of the stream to delete the address from (required)
         :return: AddressesTypesDeleteAddressResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -355,7 +355,7 @@ class EVMStreamsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param StreamsTypesUUID id: The id of the stream to delete (required)
+        :param str id: The id of the stream to delete (required)
         :return: StreamsTypesStreamsModel
                  If the method is called asynchronously,
                  returns the request thread.
@@ -377,7 +377,7 @@ class EVMStreamsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param StreamsTypesUUID id: The id of the stream to delete (required)
+        :param str id: The id of the stream to delete (required)
         :return: StreamsTypesStreamsModel
                  If the method is called asynchronously,
                  returns the request thread.
@@ -450,7 +450,7 @@ class EVMStreamsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param AddressesTypesUUID id: the id of the stream to get the addresses from (required)
+        :param str id: the id of the stream to get the addresses from (required)
         :param float limit: Limit response results max value 100 (required)
         :param str cursor: Cursor for fetching next page
         :return: AddressesTypesAddressesResponse
@@ -474,7 +474,7 @@ class EVMStreamsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param AddressesTypesUUID id: the id of the stream to get the addresses from (required)
+        :param str id: the id of the stream to get the addresses from (required)
         :param float limit: Limit response results max value 100 (required)
         :param str cursor: Cursor for fetching next page
         :return: AddressesTypesAddressesResponse
@@ -557,7 +557,7 @@ class EVMStreamsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param StreamsTypesUUID id: The id of the stream to get (required)
+        :param str id: The id of the stream to get (required)
         :return: StreamsTypesStreamsModel
                  If the method is called asynchronously,
                  returns the request thread.
@@ -579,7 +579,7 @@ class EVMStreamsApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param StreamsTypesUUID id: The id of the stream to get (required)
+        :param str id: The id of the stream to get (required)
         :return: StreamsTypesStreamsModel
                  If the method is called asynchronously,
                  returns the request thread.
@@ -752,7 +752,7 @@ class EVMStreamsApi(object):
 
         :param async_req bool
         :param PartialStreamsTypesStreamsModelCreate_ body: Provide a Stream Model (required)
-        :param StreamsTypesUUID id: The id of the stream to update (required)
+        :param str id: The id of the stream to update (required)
         :return: StreamsTypesStreamsModel
                  If the method is called asynchronously,
                  returns the request thread.
@@ -775,7 +775,7 @@ class EVMStreamsApi(object):
 
         :param async_req bool
         :param PartialStreamsTypesStreamsModelCreate_ body: Provide a Stream Model (required)
-        :param StreamsTypesUUID id: The id of the stream to update (required)
+        :param str id: The id of the stream to update (required)
         :return: StreamsTypesStreamsModel
                  If the method is called asynchronously,
                  returns the request thread.
@@ -859,7 +859,7 @@ class EVMStreamsApi(object):
 
         :param async_req bool
         :param StreamsTypesStreamsStatusUpdate body: Provide a Stream Model (required)
-        :param StreamsTypesUUID id: The id of the stream to update (required)
+        :param str id: The id of the stream to update (required)
         :return: StreamsTypesStreamsModel
                  If the method is called asynchronously,
                  returns the request thread.
@@ -882,7 +882,7 @@ class EVMStreamsApi(object):
 
         :param async_req bool
         :param StreamsTypesStreamsStatusUpdate body: Provide a Stream Model (required)
-        :param StreamsTypesUUID id: The id of the stream to update (required)
+        :param str id: The id of the stream to update (required)
         :return: StreamsTypesStreamsModel
                  If the method is called asynchronously,
                  returns the request thread.

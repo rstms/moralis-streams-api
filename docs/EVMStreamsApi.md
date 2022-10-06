@@ -38,7 +38,7 @@ configuration.api_key['x-api-key'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = moralis_streams_api.EVMStreamsApi(moralis_streams_api.ApiClient(configuration))
 body = moralis_streams_api.AddressesTypesAddressesAdd() # AddressesTypesAddressesAdd | Provide a Address Model
-id = moralis_streams_api.StreamsTypesUUID() # StreamsTypesUUID | The id of the stream to add the address to
+id = 'id_example' # str | The id of the stream to add the address to
 
 try:
     api_response = api_instance.add_address_to_stream(body, id)
@@ -52,7 +52,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**AddressesTypesAddressesAdd**](AddressesTypesAddressesAdd.md)| Provide a Address Model | 
- **id** | [**StreamsTypesUUID**](.md)| The id of the stream to add the address to | 
+ **id** | [**str**](.md)| The id of the stream to add the address to | 
 
 ### Return type
 
@@ -146,7 +146,7 @@ configuration.api_key['x-api-key'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = moralis_streams_api.EVMStreamsApi(moralis_streams_api.ApiClient(configuration))
 body = moralis_streams_api.AddressesTypesAddressesRemove() # AddressesTypesAddressesRemove | Provide a Address Model
-id = moralis_streams_api.StreamsTypesUUID() # StreamsTypesUUID | The id of the stream to delete the address from
+id = 'id_example' # str | The id of the stream to delete the address from
 
 try:
     api_response = api_instance.delete_address_from_stream(body, id)
@@ -160,7 +160,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**AddressesTypesAddressesRemove**](AddressesTypesAddressesRemove.md)| Provide a Address Model | 
- **id** | [**StreamsTypesUUID**](.md)| The id of the stream to delete the address from | 
+ **id** | [**str**](.md)| The id of the stream to delete the address from | 
 
 ### Return type
 
@@ -200,7 +200,7 @@ configuration.api_key['x-api-key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = moralis_streams_api.EVMStreamsApi(moralis_streams_api.ApiClient(configuration))
-id = moralis_streams_api.StreamsTypesUUID() # StreamsTypesUUID | The id of the stream to delete
+id = 'id_example' # str | The id of the stream to delete
 
 try:
     api_response = api_instance.delete_stream(id)
@@ -213,7 +213,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**StreamsTypesUUID**](.md)| The id of the stream to delete | 
+ **id** | [**str**](.md)| The id of the stream to delete | 
 
 ### Return type
 
@@ -253,7 +253,7 @@ configuration.api_key['x-api-key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = moralis_streams_api.EVMStreamsApi(moralis_streams_api.ApiClient(configuration))
-id = moralis_streams_api.AddressesTypesUUID() # AddressesTypesUUID | the id of the stream to get the addresses from
+id = 'id_example' # str | the id of the stream to get the addresses from
 limit = 1.2 # float | Limit response results max value 100
 cursor = 'cursor_example' # str | Cursor for fetching next page (optional)
 
@@ -268,7 +268,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**AddressesTypesUUID**](.md)| the id of the stream to get the addresses from | 
+ **id** | [**str**](.md)| the id of the stream to get the addresses from | 
  **limit** | **float**| Limit response results max value 100 | 
  **cursor** | **str**| Cursor for fetching next page | [optional] 
 
@@ -310,7 +310,7 @@ configuration.api_key['x-api-key'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = moralis_streams_api.EVMStreamsApi(moralis_streams_api.ApiClient(configuration))
-id = moralis_streams_api.StreamsTypesUUID() # StreamsTypesUUID | The id of the stream to get
+id = 'id_example' # str | The id of the stream to get
 
 try:
     api_response = api_instance.get_stream(id)
@@ -323,7 +323,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**StreamsTypesUUID**](.md)| The id of the stream to get | 
+ **id** | [**str**](.md)| The id of the stream to get | 
 
 ### Return type
 
@@ -419,7 +419,7 @@ configuration.api_key['x-api-key'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = moralis_streams_api.EVMStreamsApi(moralis_streams_api.ApiClient(configuration))
 body = moralis_streams_api.PartialStreamsTypesStreamsModelCreate_() # PartialStreamsTypesStreamsModelCreate_ | Provide a Stream Model
-id = moralis_streams_api.StreamsTypesUUID() # StreamsTypesUUID | The id of the stream to update
+id = 'id_example' # str | The id of the stream to update
 
 try:
     api_response = api_instance.update_stream(body, id)
@@ -433,7 +433,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**PartialStreamsTypesStreamsModelCreate_**](PartialStreamsTypesStreamsModelCreate_.md)| Provide a Stream Model | 
- **id** | [**StreamsTypesUUID**](.md)| The id of the stream to update | 
+ **id** | [**str**](.md)| The id of the stream to update | 
 
 ### Return type
 
@@ -474,7 +474,7 @@ configuration.api_key['x-api-key'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = moralis_streams_api.EVMStreamsApi(moralis_streams_api.ApiClient(configuration))
 body = moralis_streams_api.StreamsTypesStreamsStatusUpdate() # StreamsTypesStreamsStatusUpdate | Provide a Stream Model
-id = moralis_streams_api.StreamsTypesUUID() # StreamsTypesUUID | The id of the stream to update
+id = 'id_example' # str | The id of the stream to update
 
 try:
     api_response = api_instance.update_stream_status(body, id)
@@ -488,7 +488,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**StreamsTypesStreamsStatusUpdate**](StreamsTypesStreamsStatusUpdate.md)| Provide a Stream Model | 
- **id** | [**StreamsTypesUUID**](.md)| The id of the stream to update | 
+ **id** | [**str**](.md)| The id of the stream to update | 
 
 ### Return type
 
