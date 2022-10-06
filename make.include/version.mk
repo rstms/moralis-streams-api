@@ -51,9 +51,6 @@ version-update:
 	$(call gitclean)
 	[ -f .bumpversion.cfg ] || { echo "$$BUMPVERSION_CFG" >.bumpversion.cfg; git add .bumpversion.cfg; }
 	$(MAKE) requirements.txt
-	sed -E -i $(module)/version.py -e "s/(.*__timestamp__.*=).*/\1 \"$$(date --rfc-3339=seconds)\"/"
-	git add $(module)/version.py
-	@echo "Updated version.py timestamp and requirements.txt"
 
 # clean up version tempfiles
 version-clean:
